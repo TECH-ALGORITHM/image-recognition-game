@@ -1,13 +1,13 @@
 const mongoose = require("mongoose");
-const connect = mongoose.connect("mongodb://localhost:27017/login-new");
+MONGODB_CONNECT_URI =
+  "mongodb+srv://joy212ambuj:ambuj123456@login-new.jwizbr8.mongodb.net/merngg?retryWrites=true&w=majority&appName=login-new";
 
-connect
+mongoose
+  .connect(MONGODB_CONNECT_URI)
   .then(() => {
-    console.log("Database connected Succsessfully");
+    console.log("connection success");
   })
-  .catch(() => {
-    console.log("Database connected succcessfully");
-  });
+  .catch((error) => console.log("failed   ++++" + error.message));
 const loginSchema = new mongoose.Schema({
   name: {
     type: String,
