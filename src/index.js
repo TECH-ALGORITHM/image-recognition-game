@@ -62,6 +62,6 @@ app.post("/login", async (req, res) => {
 });
 const port = 7000;
 
-app.listen(port,'image-recognition-game-ambuj.onrender.com', () => {
+app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
